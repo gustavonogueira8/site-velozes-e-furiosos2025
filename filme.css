@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* empilha elementos de cima para baixo */
+    align-items: center;
+    /* centraliza horizontalmente */
+    min-height: 100vh;
+    background: #ededed; background-image:linear-gradient(180deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 19.6%),
+    radial-gradient(97.07% 97.07% at 60.4% -13.07%,
+      rgba(0, 0, 0, 0) 56.64%,
+      #000000 100%),
+    url("imagens-de-velozes-e-furiosos.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 0 5%; 
+   
+
+}
+
+ 
+
+/* Navegação no topo */
+nav {
+    position: relative;
+    width: 730px;
+    /* aumentei a largura para caber todos os botões */
+    height: 50px;
+    background: #222;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+nav span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 100%;
+    background: linear-gradient(45deg, #4f1919, #ff3333);
+    border-radius: 8px;
+    transition: 0.5s;
+    z-index: 0;
+}
+
+/* Animação no hover */
+
+/* Inicio */
+nav a:nth-child(1):hover~span {
+    left: 0;
+    width: 90px;
+}
+
+/* Trailer */
+nav a:nth-child(2):hover~span {
+    left: 90px;
+    width: 90px;
+}
+
+/* Personagens  */
+nav a:nth-child(3):hover~span {
+    left: 180px;
+    width: 130px;
+}
+
+/* Filme */
+nav a:nth-child(4):hover~span {
+    left: 295px;
+    width: 90px;
+}
+
+/* Curiosidades */
+nav a:nth-child(5):hover~span {
+    left: 380px;
+    /* ajuste conforme necessário */
+    width: 150px;
+    /* aumente até cobrir o texto */
+}
+
+/* galeria */
+nav a:nth-child(6):hover~span {
+    left: 500px;
+    width: 130px;
+}
+
+/* Contato */
+nav a:nth-child(7):hover~span {
+    left: 595px;
+    width: 135px;
+}
+.titulo-principal {
+    margin-top: 20px;
+    text-align: center;
+    color: red;
+    font-size: 36px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.container-filmes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.card {
+    border: 2px solid red;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.card h2 {
+    color: red;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+}
